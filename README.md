@@ -36,8 +36,8 @@ be addressed.
 
 ### Running the model
 
-1) Unzip file
-2) Change directory (cd) in Matlab to folder containing plot_struct.m
-3) Run plot_struct within Matlab.
+  1. Unzip file
+  2. Change directory (cd) in Matlab to folder containing plot_struct.m
+  3. Run plot_struct within Matlab.
 
 
