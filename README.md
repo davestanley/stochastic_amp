@@ -1,7 +1,7 @@
 Stochastic Amp
 =====
 
-Stochastic amplification code for Stanley DA, Bardakjian BL, Spano ML, Ditto WL (2011) Stochastic amplification of calcium-activated potassium currents in Ca(2+) microdomains. J Comput Neurosci
+Stochastic amplification code for Stanley DA, Bardakjian BL, Spano ML, Ditto WL (2011) Stochastic amplification of calcium-activated potassium currents in Ca(2+) microdomains. J Comput Neurosci. 31(3):647-66.
 
 http://www.ncbi.nlm.nih.gov/pubmed/21538141
 
