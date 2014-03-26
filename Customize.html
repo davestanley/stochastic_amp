@@ -1,0 +1,56 @@
+<html><pre>
+
+<b>Customizing the model:</b> (<a href="README.html">back to readme</a>)
+The comments included in plot_struct.m should provide sufficient
+information for easy customization of the script. Below, we will draw
+attention to several variables that users may wish to modify.
+
+
+<span style="color:#0000BB">plot_raw = 1;</span>
+<span style="color:#0000BB">plot_meanbar = 1;</span>
+Turns on plot of raw traces and also bar graphs showing mean value of
+raw traces (0=off, 1=on).
+
+
+<span style="color:#0000BB">channel_list = {'hill2', ...}</span>
+<span style="color:#0000BB">exp_channel=channel_list{X};</span>
+Cell array "channel_list" contains the names of all the channels
+implemented in our minimal model. To select a channel to simulate,
+change X to the corresponding number (X=1-6). Choices are:
+'<span style="color:green">hill2s</span>' - Hill equation determining nonstationary gating of SK2
+'<span style="color:green">vTau2s</span>' - A typical 2-state Markov process.
+'<span style="color:green">sAHP5s</span>' - Implementation of the sAHP channel (eqn 11 in
+	Stanley et al), without the final O state
+'<span style="color:green">sAHP6s</span>' - Full implementation of sAHP (eqn 11)
+'<span style="color:green">SK2_6s</span>' - SK2 channel kinetic scheme for low open probability
+	gating regime (eqn 6)
+'<span style="color:green">SK2h_6s</span>' - SK2 channel kinetic scheme for high open probability
+	gating regime (eqn 7)
+
+
+<span style="color:#0000BB">scalingfactors = [1 2 4 8 16 32 64 128];</span>
+Specifies scaling factor by which to scale pulse height and spacing.
+See "Model details" section above and comments in plot_struct.m. 
+
+
+<span style="color:#0000BB">p.tf = 10;</span>
+This is the stop time (in seconds) of the simulation. Here we use 10
+seconds. Default for Figure 9 is 180 seconds (very slow).
+
+
+<span style="color:#0000BB">p.stats_start = 3.1;</span>
+When calculating the mean current through a channel, the first
+3.1 seconds are discarded to allow for initial settling time. This
+value should be changed according to the settling time of the
+channel under consideration.
+
+	
+<span style="color:#0000BB">p.rate_scale = 1;</span>
+Scales all rate constants of the channel's kinetic scheme by this
+value. Setting this to 100 generates the "fast" traces in
+Figure 9b and 9c.
+
+Good luck and have fun!
+
+
+</pre></html>
